@@ -1,0 +1,49 @@
+------------------Swapping of two strings-------------------
+
+import java.util.*;
+class Main{
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    
+    String str1 = sc.nextLine();
+    String str2 = sc.nextLine();
+    char[] chara1 = str1.toCharArray();
+    char[] chara2 = str2.toCharArray();
+    for(int i=0;i<chara1.length && i<chara2.length;i++){
+      chara1[i] ^= chara2[i];
+      chara2[i] ^= chara1[i];
+      chara1[i] ^= chara2[i];
+    }
+    
+    str1 = new String(chara1);
+    str2 = new String(chara2);
+    System.out.print(str1 + " " + str2);
+  }
+}
+
+------------------------Sum of the digit of Each element in array--------------------
+import java.util.*;
+class Main{
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    int size = sc.nextInt();
+    int []arr = new int[size];
+    for(int i=0;i<size;i++){
+      arr[i] = sc.nextInt();
+    }
+    
+    for(int i=0;i<size;i++){
+      int sum =0,rem;
+      int num = arr[i];
+  
+      while(num>0){
+      rem = num%10;
+      sum+=rem;
+      num = num/10;
+      }
+      System.out.print(sum+" ");
+    }
+  }
+}
+
+
