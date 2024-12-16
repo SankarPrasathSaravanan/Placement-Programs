@@ -95,7 +95,24 @@ class Main{
     for(int i=0;i<num;i++){
       string[i] = sc.nextLine();
     }
+
     Arrays.sort(string);
+instead of --------
+        int index = 0;
+        while (index < num - 1) {
+            if (string[index].compareTo(string[index + 1]) > 0) {
+                // Swap adjacent elements
+                String temp = string[index];
+                string[index] = string[index + 1];
+                string[index + 1] = temp;
+                // Restart from the beginning
+                index = 0;
+            } else {
+                index++;
+            }
+        }
+
+
     for(int i=0;i<num;i++){
       System.out.print(string[i]+"\n");
     }
@@ -103,4 +120,32 @@ class Main{
   }
 }
 
-----------------------
+----------------------Finding the Single Unique Number------------------------------------
+
+Example:
+
+Input: [4, 1, 2, 1, 2]
+Output: 4
+
+int unique = 0;
+for (int num : arr) {
+    unique ^= num;
+}
+System.out.println(unique);
+
+-----------------------------Checking if Two Numbers are Equal---------------------------
+if ((a ^ b) == 0) {
+    System.out.println("Equal");
+} else {
+    System.out.println("Not Equal");
+}
+
+------------------------------------Finding Missing Number in an Array----------------------
+int xor = 0, n = arr.length;
+for (int i = 0; i <= n; i++) {
+    xor ^= i;
+}
+for (int num : arr) {
+    xor ^= num;
+}
+System.out.println(xor);
