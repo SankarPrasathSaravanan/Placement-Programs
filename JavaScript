@@ -1,0 +1,36 @@
+------------------------------------------Basics of commands---------------------------------
+
+
+const str1 = "42";
+const num = 42;
+console.log(Number(str1)) //42
+console.log(Number("sankar"))//NaN
+console.log(Number(true)+1)//2
+console.log(str1.toString());//42
+
+
+//String
+strname = "sankarprasath";
+console.log(strname.length);//13
+console.log(strname.charAt(5));//r
+console.log(strname.indexOf("sa"));//0
+console.log(strname.lastIndexOf("sa"));//9
+
+
+
+const myvar = "123.2sankar";
+console.log(Number.parseFloat(myvar));//437.89
+console.log(Number.parseInt(myvar));//437
+
+//Math
+
+console.log(Math.PI);
+console.log(Math.trunc(Math.PI));//3
+console.log(Math.round(Math.PI));//3
+console.log(Math.ceil(Math.PI));//4
+console.log(Math.ceil(4.8));//5
+console.log(Math.floor(4.8));//4
+
+//how to get the random number upto 1 to 100 and string also
+console.log(Math.floor(Math.random()*100)+1); //floor will consider the 99 so it will be add the +1
+console.log(myvar.charAt((Math.floor(Math.random()*myvar.length))));
