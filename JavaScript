@@ -34,3 +34,21 @@ console.log(Math.floor(4.8));//4
 //how to get the random number upto 1 to 100 and string also
 console.log(Math.floor(Math.random()*100)+1); //floor will consider the 99 so it will be add the +1
 console.log(myvar.charAt((Math.floor(Math.random()*myvar.length))));
+
+
+
+--------------------------------------------------if else Statement--------------------------------
+//if else condition
+
+let learning = "Youtube javascript course";
+//reply command
+let reply;
+if(learning){
+    //suppose will use customer string we use  ``--> this 
+    reply = `Watch learning:${learning} and also learn other courses.`;
+}
+//if learning string is there print "watch learning" otherwise execute else statement
+else{
+    reply = "Sorry not available the course in youtube";
+}
+console.log(reply);
