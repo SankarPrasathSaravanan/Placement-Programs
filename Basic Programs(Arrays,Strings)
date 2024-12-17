@@ -149,3 +149,30 @@ for (int num : arr) {
     xor ^= num;
 }
 System.out.println(xor);
+
+----------------------------------Email based question-----------------------
+Input: abcde@gmail.com
+Output: a***e@gmail.com
+
+import java.util.*;
+class Main{
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    String str = sc.nextLine();
+    int value=-1;
+    for(int i=0;i<str.length();i++){
+      if(str.charAt(i) == '@'){
+        value = i;
+        break;
+      }
+    }
+    
+    char[] strchar = str.toCharArray();
+    for(int i=1;i<value-1;i++){
+      strchar[i] = '*';
+    }
+    String duplicate = new String(strchar);
+    System.out.print(duplicate);
+  }
+}
+
