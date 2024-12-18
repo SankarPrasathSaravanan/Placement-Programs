@@ -1,0 +1,43 @@
+let playergame = confirm("We go to play this game?");
+if(playergame){
+    let playerchoice = prompt("please enter rock,paper and scissors.");
+    if(playerchoice){
+        let player = playerchoice.trim().toLowerCase();
+        if(
+            player === "rock" ||
+            player === "paper" ||
+            player === "scissors"
+        ){
+            let computerchoice = Math.floor(Math.random()*3+1);
+            let computer = 
+            computerchoice === 1
+            ? "rock": computerchoice === 2 ? "paper" : "scissors";
+
+            let result = 
+            player === computer
+            ? "Tie game!"
+            : player === "rock" && computer === "paper"
+            ? `player: ${player}\nComputer: ${computer}\nComputer wins`
+            : player == "paper" && computer === "scissors"
+            ? `player: ${player}\nComputer: ${computer}\nComputer wins`
+            : player === "scissors" && computer === "rock"
+            ? `player: ${player}\nComputer: ${computer}\nComputer Wins`
+            : `player: ${player}\nCOmputer: ${computer}\nPlayer Win`;
+            alert(result);
+            let playagain = confirm("play again");
+            playagain ? location.reload() : alert("Ok thank you");
+        }
+        else{
+            console.log("Please correct the choices");
+        }
+    }
+    else{
+        console.log("Ok next time interest to learn this game");
+    }
+}
+else{
+    console.log("Ok thank you");
+}
+
+
+
