@@ -52,3 +52,21 @@ else{
     reply = "Sorry not available the course in youtube";
 }
 console.log(reply);
+
+-------------------------------------Arrays--------------------------------
+const muArray = [];
+muArray[0] ="sankar";
+muArray[1] = "prasath";
+muArray[2] = "roll no:7376212ct150";
+muArray[3] = "Computer TEchnology";
+
+// console.log(muArray);
+
+muArray.push("praveen");//add the elemnet will be last position its default.
+
+muArray.unshift("Srikanth");//add the element should be first in the given array.
+
+muArray.pop();//its last element will be removed its default.
+muArray.shift();//first element in an array will be removed.
+
+console.log(muArray);
